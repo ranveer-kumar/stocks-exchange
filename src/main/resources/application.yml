@@ -11,7 +11,7 @@ spring:
     banner-mode: console
     allow-bean-definition-overriding: true
   application: 
-    name: stock-exchange
+    name: stock-exchange-service
 server:
   port: 9000
 management: 

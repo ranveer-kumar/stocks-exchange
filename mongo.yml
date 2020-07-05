@@ -17,10 +17,11 @@ metadata:
 spec:
   selector:
     app: mongo
-#  type: NodePort
+  type: NodePort
   ports:
     - port: 27017
       targetPort: 27017
+      nodePort: 30017
 ---
 apiVersion: apps/v1
 kind: Deployment

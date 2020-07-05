@@ -11,4 +11,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/storage/mnt/k8s/pv/stock"
+    path: "/Users/ranveer/Documents/Kitematic/k8s/pv/stock"
