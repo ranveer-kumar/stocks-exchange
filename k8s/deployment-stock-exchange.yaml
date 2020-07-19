@@ -6,7 +6,7 @@ metadata:
     app: stock-exchange-service
     type: backend
 spec:
-  replicas: 1
+  replicas: 2
   minReadySeconds: 45
   selector:
     matchLabels:
@@ -55,13 +55,13 @@ spec:
           ports:
           - name: liveness-port
             containerPort: 9000
-          resources: #CHANGE
-            requests:
-              cpu: 100m
-              memory: 256Mi
-            limits:
-              cpu: 500m
-              memory: 512Mi #256Mi
+#          resources: #CHANGE
+#            requests:
+#              cpu: 100m
+#              memory: 256Mi
+#            limits:
+#              cpu: 500m
+#              memory: 512Mi #256Mi
 
 #          readineseProbe:
 #            httpGet:

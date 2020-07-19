@@ -12,7 +12,7 @@
 	<groupId>com.fondofit</groupId>
 	<artifactId>stock-exchange-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>stock-exchange</name>
+	<name>stock-exchange-service</name>
 	<description>Stock exchange service</description>
 
 	<properties>
@@ -118,6 +118,26 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.4.6</version>
+				<executions>
+					<execution>
+						<id>default</id>
+						<goals>
+							<goal>build</goal>
+							<goal>push</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<repository>localhost:5000/${project.name}</repository>
+					<tag>${project.version}</tag>
+					<skipDockerInfo>true</skipDockerInfo>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 
